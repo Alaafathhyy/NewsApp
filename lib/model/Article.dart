@@ -10,14 +10,13 @@ class Article {
   String publishedAt;
   String content;
 
-  Article.fromJson(Map<String, dynamic> jsonMap) {
-    source = jsonMap['source'] != null ? new Source.fromJson(jsonMap['source']) : null;
-    author = jsonMap['author'];
-    title = jsonMap['title'];
-    description = jsonMap['description'];
-    url = jsonMap['url'];
-    urlToImage = jsonMap['urlToImage'];
-    publishedAt = jsonMap['publishedAt'];
-    content = jsonMap['content'];
-  }
+  Article.fromJson(Map<String, dynamic> jsonMap)
+      : source = Source.fromJson(jsonMap["source"]),
+        author = jsonMap["author"] != null ? jsonMap["author"] : '',
+        title = jsonMap["title"] != null ? jsonMap["title"] : '',
+        description = jsonMap["description"] != null ? jsonMap["description"] : '',
+        url = jsonMap["url"] != null ? jsonMap["url"] : '',
+        urlToImage = jsonMap["urlToImage"] != null ? jsonMap["urlToImage"] : '',
+        publishedAt = jsonMap["publishedAt"] != null ? jsonMap["publishedAt"] : '',
+        content = jsonMap["content"] != null ? jsonMap["content"] : '';
 }

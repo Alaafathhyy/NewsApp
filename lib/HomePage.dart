@@ -88,9 +88,10 @@ class _HomeCategoriesState extends State<HomeCategories> {
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           mainAxisSpacing: 12,
-                          crossAxisSpacing: 12),
-                      itemBuilder: (buildContext, index) => CategoryGridItem(
-                          data[index], widget.ItemClick),
+                          crossAxisSpacing: 12
+                      ),
+                      itemBuilder: (buildContext, index) =>
+                          CategoryGridItem(data[index], widget.ItemClick),
                       itemCount: data.length,
                     ),
                   ],

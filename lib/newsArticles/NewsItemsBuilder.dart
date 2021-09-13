@@ -28,9 +28,9 @@ class _NewsItemsBuilderState extends State<NewsItemsBuilder> {
         builder: (context, snapShot) {
           if (snapShot.hasData) {
             return ListView.builder(
-                itemCount: snapShot.data.articles.length,
+                itemCount: snapShot?.data?.articles?.length,
                 itemBuilder: (context, index) {
-                  return NewsItem(snapShot.data.articles[index]);
+                  return NewsItem(snapShot?.data?.articles[index]);
                 });
           } else if (snapShot.hasError) {
             return Center(

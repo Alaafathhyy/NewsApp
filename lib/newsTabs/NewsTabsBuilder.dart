@@ -28,7 +28,7 @@ class _NewsTabsBuilderState extends State<NewsTabsBuilder> {
         future: newsSourceResponse,
         builder: (buildContext, snapShot) {
           if (snapShot.hasData) {
-            return AllTabsItems(snapShot.data.sources);
+            return AllTabsItems(snapShot?.data?.sources);
           } else if (snapShot.hasError) {
             return Center(
               child: FloatingActionButton(
