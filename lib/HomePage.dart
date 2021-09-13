@@ -30,7 +30,13 @@ class _HomeCategoriesState extends State<HomeCategories> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("News app"),
+        title: Text("News App"),
+        shape: ContinuousRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(70),
+            bottomRight: Radius.circular(70),
+          ),
+        ),
       ),
       drawer: Drawer(
         child: Column(

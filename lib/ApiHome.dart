@@ -17,8 +17,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  Future<SourcesResponse> newsFuture;
-
   @override
   void initState() {
     super.initState();
@@ -28,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("News app"),
+        title: Text("News App"),
       ),
       drawer: Drawer(
         child: Column(
